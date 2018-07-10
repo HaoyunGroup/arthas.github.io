@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的奖券</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <script src="./js/flexible.debug.js"></script>
+    <script src="./js/flexible_css.debug.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            text-decoration: none;
+        }
+
+        html,
+        body {
+            background: #eff1f3;
+        }
+
+        .gift-wrap {
+            width: 10rem;
+            margin: 0 auto;
+        }
+
+        .gift-wrap ul {
+            width: 8.8rem;
+            margin: 0 auto;
+            padding-top: 0.4rem;
+        }
+
+        .gift-wrap ul li {
+            margin: 0.4rem 0;
+            cursor: pointer;
+            border-radius: 0.133333rem 0.133333rem 0 0;
+        }
+
+        .gift-wrap ul img {
+            display: block;
+            width: 8.8rem;
+            height: auto;
+        }
+
+        .qr-code {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 10rem;
+            height: 100%;
+            margin-left: -5rem;
+            background: rgba(0, 0, 0, .3);
+        }
+
+        .qr-code img {
+            display: block;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            width: 5rem;
+            height: 5rem;
+            margin-left: -2.5rem;
+            padding: .3rem;
+            border-radius: 0.2rem;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+<div class="gift-wrap">
+    <ul class="ticket-box">
+        <li>
+            <img src="./images/ticket.png" alt="">
+            <img src="./images/head.png" alt="" style="display: none;">
+        </li>
+        <li>
+            <img src="./images/ticket.png" alt="">
+            <img src="./images/gift.png" alt="" style="display: none;">
+        </li>
+    </ul>
+</div>
+<div class="qr-code">
+    <img src="./images/research_qrcode@159x159.png" alt="">
+</div>
+</body>
+<script>
+    var ticket_box = document.querySelector(".ticket-box");
+    var tickets = ticket_box.querySelectorAll("li");
+
+    var qr_code = document.querySelector(".qr-code");
+    var qr_img = qr_code.querySelector("img");
+
+    for (var i = 0; i < tickets.length; i++) {
+        tickets[i].index = i;
+        tickets[i].onclick = function (ev) {
+            //获取兄弟级图片的src
+          var second_img_src = tickets[this.index].querySelectorAll("img")[1].src;
+            //修改二维码路径
+            qr_img.src = second_img_src;
+            qr_code.style.display = "block";
+            //执行关闭弹窗
+            clocseQrCode();
+        }
+    }
+
+    //关闭弹窗
+    function clocseQrCode() {
+        qr_code.onclick = function () {
+            qr_code.style.display = "none";
+        }
+    }
+</script>
+</html>

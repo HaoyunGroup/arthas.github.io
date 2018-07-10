@@ -1,0 +1,222 @@
+.sort-bar {
+  background: #F7F7F7;
+  display: block;
+  height: 43px;
+  line-height: 43px;
+  border: solid 1px #e5e5e5;
+}
+
+.nch-sortbar-array {
+  font: 12px/36px "microsoft yahei";
+  color: #777;
+  vertical-align: top;
+  display: inline-block;
+  padding: 0 0 0 10px;
+  width: 510px;
+  ul {
+    font-size: 0;
+    vertical-align: middle;
+    display: inline-block;
+    border-right: solid 1px #E6E6E6;
+  }
+
+  li {
+    font: 12px/20px "microsoft yahei";
+    vertical-align: top;
+    letter-spacing: normal;
+    line-height: 43px;
+    height: 43px;
+    word-spacing: normal;
+    display: inline-block;
+    border-left: solid 1px #E6E6E6;
+    a {
+      color: #666;
+      display: block;
+      line-height: 25px;
+      height: 25px;
+      padding: 8px 13px 8px 12px;
+      i {
+        background: url(/static/images/shop_background_img.png) no-repeat 0 -1px;
+        vertical-align: middle;
+        display: inline-block;
+        width: 7px;
+        height: 8px;
+        margin-left: 4px;
+      }
+      i.down {
+        background: url(/static/images/shop_background_img.png) no-repeat -7px -11px;
+      }
+    }
+  }
+
+  li:hover {
+    a {
+      color: red;
+      i {
+        background: url(/static/images/shop_background_img.png) no-repeat -7px -11px;
+      }
+    }
+  }
+}
+
+.goods-search-list {
+  width: 980px;
+  float: left;
+}
+
+.list {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  margin: 12px 0 0 12px;
+  position: relative;
+}
+
+.box {
+  line-height: 18px;
+  background-color: #FFF;
+  width: 220px;
+  height: 388px;
+  margin: 3px;
+  border: solid 1px #F0F0F0;
+  border-radius: 2px;
+  position: relative;
+  bottom: 0;
+  z-index: 11;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 0px #eee;
+  transition: all 0.3s;
+}
+
+.box:hover {
+  box-shadow: 3px 8px 20px 0px #ccc;
+  bottom: 5px;
+  .goods-info {
+    top: 200px;
+  }
+}
+
+.goods-images {
+  width: 100%;
+  height: 220px;
+  background-color: #fff;
+  .images-wrap {
+    text-align: center;
+    height: 100%;
+  }
+  .images-wrap:after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.goods-info {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 240px;
+  transition: all 0.3s;
+  .goods-pic-scroll-show {
+    background: rgba(255, 255, 255, 0.9);
+    width: 220px;
+    height: 30px;
+    padding: 5px 10px;
+    ul {
+      font-size: 0;
+      width: 180px;
+      height: 30px;
+    }
+  }
+  .goods-name {
+    font-size: 12px;
+    line-height: 16px;
+    color: #999;
+    background-color: #FFF;
+    height: 32px;
+    display: block;
+    padding: 0 10px !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 220px;
+  }
+  .goods-price {
+    font: 12px/20px Arial;
+    color: #C00;
+    background-color: #FFF;
+    white-space: nowrap;
+    display: block;
+    padding: 5px 10px 10px;
+    overflow: hidden;
+    div.sale-price {
+      font-size: 16px;
+      font-weight: 600;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 100px;
+      float: left;
+      overflow: hidden;
+    }
+    .raty {
+      font-size: 0;
+      line-height: 0;
+      float: right;
+    }
+  }
+  .sell-stat {
+    width: 212px;
+    margin: 0 auto;
+    border-top: solid 1px #EEE;
+    overflow: hidden;
+    ul {
+      font-size: 0;
+      width: 213px;
+      margin-left: -1px;
+      display: flex;
+      li {
+        text-align: center;
+        flex: 1;
+        padding: 5px;
+        margin: 0;
+        border-left: solid 1px #EEE;
+        a {
+          color: #B57C5B;
+          vertical-align: middle;
+          font-size: 16px;
+          font-weight: bolder;
+        }
+        a.status {
+          color: #3388BB;
+        }
+        p {
+          line-height: 20px;
+          color: #999;
+          height: 20px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .add-cart {
+    display: block;
+    a {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      color: #F5CDBF;
+      text-shadow: -2px 0 0 rgba(0, 0, 0, 0.05);
+      background-color: #0085cd;
+      text-align: center;
+      display: block;
+      padding: 5px 0;
+      margin-bottom: 10px;
+    }
+
+    a:hover {
+      color: #FFF;
+    }
+  }
+}
