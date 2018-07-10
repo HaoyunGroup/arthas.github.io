@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html style="background: #fff;">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <!-- 这两个js文件必须先加载 -->
+    <script src="../../js/flexible.debug.js"></script>
+    <script src="../../js/flexible_css.debug.js"></script>
+    <title>餐桌管理</title>
+    <link rel="stylesheet" href="../../css/Arthas_Rest.css">
+    <link rel="stylesheet" href="../../css/h5_style.css">
+</head>
+<body style="background: #fff;">
+<header class="head-wrap">
+    <a href="my.html" class="back"></a>
+    <ul class="head-double cl">
+        <li class="active"><a href="javascript:;">嘉宾列表</a></li>
+        <li><a href="table_view.html">查看餐桌</a></li>
+    </ul>
+</header>
+<section class="body-wrap">
+    <div class="mem-search cl">
+        <input type="search" placeholder="请输入关键字搜索">
+        <button class="mem-search-btn"></button>
+    </div>
+    <div class="mem-table-box">
+        <table class="mem-table">
+            <thead>
+            <tr>
+                <th>姓名</th>
+                <th>电话</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>阿尔萨斯</td>
+                <td>18584354613</td>
+                <td>
+                    <a href="javascript:;" class="mem-view">查看</a>|<a href="table_setting.html">分配餐桌</a>
+                </td>
+            </tr>
+            <tr>
+                <td>阿尔萨斯</td>
+                <td>18584354613</td>
+                <td>
+                    <a href="javascript:;" class="mem-view">查看</a>|<a href="table_setting.html">分配餐桌</a>
+                </td>
+            </tr>
+            <tr>
+                <td>阿尔萨斯</td>
+                <td>18584354613</td>
+                <td>
+                    <a href="javascript:;" class="mem-view">查看</a>|<a href="table_setting.html">分配餐桌</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<div class="pop-bg">
+    <div class="pop-table-main">
+        <span class="pop-close"></span>
+        <ul class="pop-table-list">
+            <li class="cl">
+                <p>姓名：</p>
+                <span>阿尔萨斯</span>
+            </li>
+            <li class="cl">
+                <p>公司</p>
+                <span>北京皓云集团皓云轩网络科技有限公司</span>
+            </li>
+            <li class="cl">
+                <p>职务：</p>
+                <span>大战僵尸</span>
+            </li>
+        </ul>
+        <ul class="pop-table-info">
+            <li class="cl">
+                <p>12月11日</p>
+                <div>
+                    <p>午宴：第<span>10</span>桌<span>10</span>号</p>
+                    <p>晚宴：第<span>10</span>桌<span>10</span>号</p>
+                </div>
+            </li>
+            <li class="cl">
+                <p>12月11日</p>
+                <div>
+                    <p>午宴：第<span>10</span>桌<span>10</span>号</p>
+                    <p>晚宴：第<span>10</span>桌<span>10</span>号</p>
+                </div>
+            </li>
+            <li class="cl">
+                <p>12月11日</p>
+                <div>
+                    <p>午宴：第<span>10</span>桌<span>10</span>号</p>
+                    <p>晚宴：第<span>10</span>桌<span>10</span>号</p>
+                </div>
+            </li>
+            <li class="cl">
+                <p>12月11日</p>
+                <div>
+                    <p>午宴：第<span>10</span>桌<span>10</span>号</p>
+                    <p>晚宴：第<span>10</span>桌<span>10</span>号</p>
+                </div>
+            </li>
+        </ul>
+        <div class="pop-table-btn">
+            <button class="bg-primary">分配餐桌</button>
+        </div>
+    </div>
+</div>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<script>
+    //点击查看按钮弹出详情框
+    $(".mem-view").click(function () {
+        $(".pop-bg").show();
+        closePOP();
+    });
+
+    //点击弹窗的关闭按钮，关闭弹窗
+    function closePOP() {
+        $(".pop-close").click(function () {
+            $(".pop-bg").hide();
+        });
+    };
+</script>
+</body>
+</html>

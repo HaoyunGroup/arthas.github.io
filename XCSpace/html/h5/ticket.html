@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <!-- 这两个js文件必须先加载 -->
+    <script src="../../js/flexible.debug.js"></script>
+    <script src="../../js/flexible_css.debug.js"></script>
+    <title>我的票夹</title>
+    <link rel="stylesheet" href="../../css/Arthas_Rest.css">
+    <link rel="stylesheet" href="../../css/h5_style.css">
+</head>
+<body>
+<header class="head-wrap">
+    <a href="my.html" class="back"></a>
+    <ul class="head-triple cl">
+        <li class="active"><a href="javascript:;">我的餐券</a></li>
+        <li><a href="javascript:;">我的领用券</a></li>
+        <li><a href="javascript:;">我的积分券</a></li>
+    </ul>
+</header>
+<!--  备注：以后优惠券的尺寸 都做成 668x288px； -->
+<section class="body-wrap">
+    <ul class="ticket-list">
+        <li><img src="../../images/h5/ticket_meal@668x288.png" alt=""></li>
+        <li><img src="../../images/h5/ticket_meal@668x288_out.png" alt=""></li>
+        <li><img src="../../images/h5/ticket_meal@668x288.png" alt=""></li>
+        <li><img src="../../images/h5/ticket_meal@668x288_out.png" alt=""></li>
+    </ul>
+</section>
+<div class="pop-bg">
+    <div class="pop-ticket-qrcode">
+        <img src="../../images/h5/qrcode.png" alt="">
+    </div>
+</div>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<script>
+    $(".head-triple li").click(function () {
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+    });
+    //点击优惠券，弹出使用扫描的二维码
+    $(".ticket-list li").click(function(){
+        $(".pop-bg").show();
+    });
+</script>
+</body>
+</html>

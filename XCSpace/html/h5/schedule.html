@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <!-- 这两个js文件必须先加载 -->
+    <script src="../../js/flexible.debug.js"></script>
+    <script src="../../js/flexible_css.debug.js"></script>
+    <title>我的日程</title>
+    <link rel="stylesheet" href="../../css/Arthas_Rest.css">
+    <link rel="stylesheet" href="../../css/h5_style.css">
+</head>
+<body>
+<header class="head-wrap">
+    <a href="my.html" class="back"></a>
+    <h1>我的日程</h1>
+</header>
+<section class="sch-body-wrap">
+    <div class="banner-box">
+        <ul>
+            <li><a href="javascript:;"><img src="../../images/h5/audit_ban@750x400.png" alt=""></a></li>
+            <li><a href="javascript:;"><img src="../../images/h5/meetings_ban@750x400.png" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="sch-null">
+        <p>— 您还未添加行程 —</p>
+        <a href="schedule_add.html" class="c-primary"><i></i>添加行程</a>
+    </div>
+</section>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<script src="../../js/MobileSlider.js"></script>
+<script>
+    $(".banner-box").MobileSlider({width: 750, height: 400, during: 3000})
+</script>
+</body>
+</html>

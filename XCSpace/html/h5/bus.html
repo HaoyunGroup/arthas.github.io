@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <!-- 这两个js文件必须先加载 -->
+    <script src="../../js/flexible.debug.js"></script>
+    <script src="../../js/flexible_css.debug.js"></script>
+    <title>大巴动态</title>
+    <link rel="stylesheet" href="../../css/Arthas_Rest.css">
+    <link rel="stylesheet" href="../../css/h5_style.css">
+</head>
+<body>
+<header class="head-wrap">
+    <a href="my.html" class="back"></a>
+    <h1>大巴时刻表</h1>
+    <a href="my.html" class="home"></a>
+</header>
+<section class="bus-body-wrap">
+    <dl class="bus-con-box">
+        <dt class="bus-con-title">—12月12日—</dt>
+        <dd>
+            <div class="bus-con-header">
+                <p>09:30分发车</p>
+                <i></i>
+            </div>
+            <ul class="bus-con-body">
+                <li class="bus-con-info cl">
+                    <i></i>
+                    <div>
+                        <span>始发地</span>
+                        <p>昆山国际机场</p>
+                    </div>
+                    <div>
+                        <span>目的地</span>
+                        <p>昆山大酒店</p>
+                    </div>
+                </li>
+                <li class="bus-con-footer">
+                    <p>联系人：<span>阿尔萨斯</span>联系方式：<a href="tel:18584354613">18584354613</a></p>
+                </li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="bus-con-header">
+                <p>09:30分发车</p>
+                <i></i>
+            </div>
+            <ul class="bus-con-body">
+                <li class="bus-con-info cl">
+                    <i></i>
+                    <div>
+                        <span>始发地</span>
+                        <p>昆山国际机场</p>
+                    </div>
+                    <div>
+                        <span>目的地</span>
+                        <p>昆山大酒店</p>
+                    </div>
+                </li>
+                <li class="bus-con-footer">
+                    <p>联系人：<span>阿尔萨斯</span>联系方式：<a href="tel:18584354613">18584354613</a></p>
+                </li>
+            </ul>
+        </dd>
+    </dl>
+    <dl class="bus-con-box">
+        <dt class="bus-con-title">—12月12日—</dt>
+        <dd>
+            <div class="bus-con-header">
+                <p>09:30分发车</p>
+                <i></i>
+            </div>
+            <ul class="bus-con-body">
+                <li class="bus-con-info cl">
+                    <i></i>
+                    <div>
+                        <span>始发地</span>
+                        <p>昆山国际机场</p>
+                    </div>
+                    <div>
+                        <span>目的地</span>
+                        <p>昆山大酒店</p>
+                    </div>
+                </li>
+                <li class="bus-con-footer">
+                    <p>联系人：<span>阿尔萨斯</span>联系方式：<a href="tel:18584354613">18584354613</a></p>
+                </li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="bus-con-header">
+                <p>09:30分发车</p>
+                <i></i>
+            </div>
+            <ul class="bus-con-body">
+                <li class="bus-con-info cl">
+                    <i></i>
+                    <div>
+                        <span>始发地</span>
+                        <p>昆山国际机场</p>
+                    </div>
+                    <div>
+                        <span>目的地</span>
+                        <p>昆山大酒店</p>
+                    </div>
+                </li>
+                <li class="bus-con-footer">
+                    <p>联系人：<span>阿尔萨斯</span>联系方式：<a href="tel:18584354613">18584354613</a></p>
+                </li>
+            </ul>
+        </dd>
+    </dl>
+</section>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<script>
+$(".bus-con-header").click(function () {
+    if ($(this).parent().hasClass("bus-con-show")){
+        $(this).parent().removeClass("bus-con-show")
+    }else {
+        $(this).parent().addClass("bus-con-show")
+    }
+});
+</script>
+</body>
+</html>

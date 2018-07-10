@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html style="background: #fff;">
+<head>
+	<meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <!-- 这两个js文件必须先加载 -->
+    <script src="../../js/flexible.debug.js"></script>
+    <script src="../../js/flexible_css.debug.js"></script>
+    <title>每日活动</title>
+    <link rel="stylesheet" href="../../css/Arthas_Rest.css">
+    <link rel="stylesheet" href="../../css/h5_style.css">
+</head>
+<body style="background: #fff;">
+	<header class="head-wrap">
+		<a href="activity.html" class="back"></a>
+		<h1>每日签到</h1>
+		<a href="my.html" class="home"></a>
+	</header>
+	<section class="body-wrap">
+		<div class="banner-box">
+			<ul>
+				<li><a href="javascript:;"><img src="../../images/h5/audit_ban@750x400.png" alt=""></a></li>
+				<li><a href="javascript:;"><img src="../../images/h5/meetings_ban@750x400.png" alt=""></a></li>
+			</ul>
+		</div>
+		<div class="act-sign-box">
+			<!--
+			注意：
+				第几天就在当前 天到 div上添加 class. "active" 增大圆圈，显示当前效果
+				已经签过的天数，在div上添加 class. "finish"，在右下角添加已完成的icon。
+		 -->
+			<div class="act-sign-day cl">
+				<div class="finish">
+					<p><span>第一天</span><i></i></p>
+					<i class="act-sign-day-icon"></i>
+				</div>
+				<div class="finish">
+					<p>第二天</p>
+					<i class="act-sign-day-icon"></i>
+				</div>
+				<div class="active finish">
+					<p><span>第三天</span><strong>4月4日</strong></p>
+					<i class="act-sign-day-icon"></i>
+				</div>
+				<div>
+					<p>第四天</p>
+					<i class="act-sign-day-icon"></i>
+				</div>
+			</div>
+			<div class="act-sign-btn">
+				<button class="bg-primary">点击签到</button>
+			</div>
+			<div class="act-sign-bar">
+				<div>
+					<div id="jqmeter-container" style="overflow: hidden;"></div>
+				</div>
+				<p>签到总人数：<span>8888</span>人</p>
+			</div>
+			<div class="act-sign-rule">
+				<h6>活动规则</h6>
+				<p>我家楼上的浪费时间的流口水是独立开发建设了我家楼上的浪费时间的流口水是独立开发建设了我家楼上的浪费时间的流口水是独立开发建设了</p>
+				<p>我家楼上的浪费时间的流口水是独立开发建设了</p>
+				<p>我家楼上的浪费时间的流口水是独立开发建设了</p>
+			</div>
+		</div>
+	</section>
+	<!-- 弹窗 -->
+	<div class="pop-bg">
+		<div class="pop-ans-result">
+			<p>签到成功，感谢您为活动助力！</p>
+			<a href="activity_sign.html" class="bg-secondary">返回</a>
+		</div>
+	</div>
+	<script src="../../js/jquery-1.11.3.min.js"></script>
+	<script src="../../js/MobileSlider.js"></script>
+	<script src="../../js/jqmeter.min.js"></script>
+	<script>
+		//轮播图
+		$(".banner-box").MobileSlider({width: 750, height: 400, during: 3000})
+		//进度条
+		$(function () {
+        $('#jqmeter-container').jQMeter({
+            goal: '100',//总量 100%；
+            raised: '50',//完成进度，50%
+            width: '100%',//进度条宽度
+            height: '6px',//进度条高度
+            bgColor: "#dddddd",
+            barColor: "#0094d8"
+        });
+        //点击签到弹窗
+        $(".act-sign-btn button").click(function(){
+			$(".pop-bg").show();
+		});
+    });
+	</script>
+</body>
+</html>

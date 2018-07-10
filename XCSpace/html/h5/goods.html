@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html style="background: #fff;">
+<head>
+	<meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <!-- 这两个js文件必须先加载 -->
+    <script src="../../js/flexible.debug.js"></script>
+    <script src="../../js/flexible_css.debug.js"></script>
+    <title>产品列表</title>
+    <link rel="stylesheet" href="../../css/Arthas_Rest.css">
+    <link rel="stylesheet" href="../../css/h5_style.css">
+</head>
+<body style="background: #fff;">
+<header class="head-wrap">
+    <a href="mall.html" class="back"></a>
+    <h1>产品列表</h1>
+</header>
+<section class="body-wrap">
+	<dl class="goods-list">
+		<dt class="c-primary"><span class="bg-primary goods-list-dt-line"></span>所有产品</dt>
+		<!--
+			注意：
+				产品图片尺寸为正方形，最小尺寸237*237；
+				产品名称标题只显示一行，溢出隐藏；
+				如果有优惠的话，就让 .goods-list-img i  显示，没有就隐藏
+				如果有扶持的话，就让 .goods-list-con i  显示，没有就隐藏
+		 -->
+		<dd class="cl">
+			<div class="goods-list-img">
+				<a href="goods_details.html">
+					<img src="../../images/h5/goods_img01@237x237.png" alt="">
+					<i></i>
+				</a>
+			</div>
+			<div class="goods-list-con">
+				<h2><a href="goods_details.html" class="c-primary">[云南白药粉]</a></h2>
+				<ul>
+					<li>商品编号：<span>8888889283</span></li>
+					<li>规格：<span>10ml</span></li>
+					<li>最低批发量：<span>10件</span></li>
+					<li>批发价：<span class="c-primary">10元</span></li>
+				</ul>
+			</div>
+		</dd>
+		<dd class="cl">
+			<div class="goods-list-img">
+				<a href="goods_details.html">
+					<img src="../../images/h5/goods_img01@237x237.png" alt="">
+					<i></i>
+				</a>
+			</div>
+			<div class="goods-list-con">
+				<h2><a href="goods_details.html" class="c-primary">[云南白药粉]金沙江路看撒</a></h2>
+				<ul>
+					<li>商品编号：<span>8888889283</span></li>
+					<li>规格：<span>10ml</span></li>
+					<li>最低批发量：<span>10件</span></li>
+					<li>批发价：<span class="c-primary">10元</span></li>
+				</ul>
+				<i></i>
+			</div>
+		</dd>
+	</dl>
+</section>
+</body>
+</html>

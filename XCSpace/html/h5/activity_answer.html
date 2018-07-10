@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html style="background: #fff;">
+<head>
+	<meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <!-- 这两个js文件必须先加载 -->
+    <script src="../../js/flexible.debug.js"></script>
+    <script src="../../js/flexible_css.debug.js"></script>
+    <title>每日活动</title>
+    <link rel="stylesheet" href="../../css/Arthas_Rest.css">
+    <link rel="stylesheet" href="../../css/h5_style.css">
+</head>
+<body style="background: #fff;">
+	<header class="head-wrap">
+		<a href="activity.html" class="back"></a>
+		<h1>每日竞猜</h1>
+		<a href="my.html" class="home"></a>
+	</header>
+	<section class="body-wrap">
+		<div class="banner-box">
+			<ul>
+				<li><a href="javascript:;"><img src="../../images/h5/audit_ban@750x400.png" alt=""></a></li>
+				<li><a href="javascript:;"><img src="../../images/h5/meetings_ban@750x400.png" alt=""></a></li>
+			</ul>
+		</div>
+		<div class="act-ans-box">
+			<h2 class="act-ans-title c-secondary">每日竞猜</h2>
+			<dl class="act-ans-list">
+				<dt>Q1: Arthas 帅么？？</dt>
+				<dd>
+					<input type="radio" name="ans00">帅
+				</dd>
+				<dd>
+					<input type="radio" name="ans00">很帅
+				</dd>
+				<dd>
+					<input type="radio" name="ans00">非常帅
+				</dd>
+				<dd>
+					<input type="radio" name="ans00">天崩地裂的帅
+				</dd>
+			</dl>
+			<dl class="act-ans-list">
+				<dt>Q2: Arthas 帅么？帅到天崩地裂海枯石烂永远不后悔？</dt>
+				<dd>
+					<input type="radio" name="ans01">帅
+				</dd>
+				<dd>
+					<input type="radio" name="ans01">很帅
+				</dd>
+				<dd>
+					<input type="radio" name="ans01">非常帅
+				</dd>
+				<dd>
+					<input type="radio" name="ans01">天崩地裂的帅
+				</dd>
+			</dl>
+			<dl class="act-ans-list">
+				<dt>Q3: Arthas 帅么？？</dt>
+				<dd>
+					<input type="checkbox" name="ans02">帅
+				</dd>
+				<dd>
+					<input type="checkbox" name="ans02">很帅
+				</dd>
+				<dd>
+					<input type="checkbox" name="ans02">非常帅
+				</dd>
+				<dd>
+					<input type="checkbox" name="ans02">天崩地裂的帅
+				</dd>
+			</dl>
+		</div>
+		<div class="act-ans-btn">
+			<p>答题请点击选项，完毕后提交答案</p>
+			<button class="bg-primary">提交答卷</button>
+		</div>
+	</section>
+	<!-- 弹窗 -->
+	<div class="pop-bg">
+		<div class="pop-ans-result">
+			<p>恭喜你答对<span class="c-secondary">10</span>道题，获得<span class="c-secondary">100</span>分</p>
+			<a href="activity.html" class="bg-secondary">返回</a>
+		</div>
+	</div>
+	<script src="../../js/jquery-1.11.3.min.js"></script>
+	<script src="../../js/MobileSlider.js"></script>
+	<script>
+		//轮播图
+		$(".banner-box").MobileSlider({width: 750, height: 400, during: 3000})
+		//点击弹窗
+		$(".act-ans-btn button").click(function(){
+			$(".pop-bg").show();
+		});
+	</script>
+</body>
+</html>

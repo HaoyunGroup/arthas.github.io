@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html style="background: #fff;">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <!-- 这两个js文件必须先加载 -->
+    <script src="../../js/flexible.debug.js"></script>
+    <script src="../../js/flexible_css.debug.js"></script>
+    <title>会员管理</title>
+    <link rel="stylesheet" href="../../css/Arthas_Rest.css">
+    <link rel="stylesheet" href="../../css/h5_style.css">
+</head>
+<body style="background: #fff;">
+<header class="head-wrap">
+    <a href="my.html" class="back"></a>
+    <ul class="head-triple cl">
+        <li class="active"><a href="javascript:;">所有人</a></li>
+        <li><a href="javascript:;">未审核</a></li>
+        <li><a href="javascript:;">已审核</a></li>
+    </ul>
+</header>
+<section class="body-wrap">
+    <div class="mem-search cl">
+        <input type="search" placeholder="请输入关键字搜索">
+        <button class="mem-search-btn"></button>
+    </div>
+    <!--
+        审核状态：
+        对号为已经审核通过，  class="mem-state mem-yes"
+        错号为没有通过审核，  class="mem-state mem-not"
+        圆点为等待审核中。    class="mem-state mem-wait"
+     -->
+    <div class="mem-table-box">
+        <table class="mem-table">
+            <thead>
+            <tr>
+                <th><a href="javascript:;" class="mem-check-all">全选</a></th>
+                <th>状态</th>
+                <th>姓名</th>
+                <th>电话</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="checkbox" name="mem_table_check"></td>
+                <td><span class="mem-state mem-yes"></span></td>
+                <td>阿尔萨斯</td>
+                <td>18584354613</td>
+                <td>
+                    <a href="javascript:;" class="mem-view">查看</a>|<a href="tel:18584354613">拨打电话</a>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="mem_table_check"></td>
+                <td><span class="mem-state mem-not"></span></td>
+                <td>阿尔萨斯</td>
+                <td>18584354613</td>
+                <td>
+                    <a href="javascript:;" class="mem-view">查看</a>|<a href="tel:18584354613">拨打电话</a>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="mem_table_check"></td>
+                <td><span class="mem-state mem-wait"></span></td>
+                <td>阿尔萨斯</td>
+                <td>18584354613</td>
+                <td>
+                    <a href="javascript:;" class="mem-view">查看</a>|<a href="tel:18584354613">拨打电话</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mem-btn">
+        <button class="bg-primary">通过审核</button>
+        <button class="bg-secondary">否定审核</button>
+    </div>
+</section>
+<div class="pop-bg">
+	<div class="pop-mem-main">
+		<span class="pop-close"></span>
+		<ul class="pop-mem-list">
+			<li class="cl">
+				<p>姓名：</p>
+				<span>阿尔萨斯</span>
+			</li>
+			<li class="cl">
+				<p>手机：</p>
+				<a href="tel:18584354613" class="c-secondary">18584354613</a>
+			</li>
+			<li class="cl">
+				<p>公司：</p>
+				<span>北京送药先锋网络科技有限公司七里香分公司</span>
+			</li>
+			<li class="cl">
+				<p>职务：</p>
+				<span>大战僵尸</span>
+			</li>
+		</ul>
+		<div class="pop-mem-btn">
+			<button class="bg-primary">通过审核</button>
+			<button class="bg-secondary">否定审核</button>
+		</div>
+	</div>
+</div>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<script>
+    //点击顶部切换审核板块
+    $(".head-triple li").click(function () {
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+    });
+    //点击全选选择所有
+    $(".mem-check-all").click(function () {
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+            $(".mem-table :checkbox").prop("checked", false).attr("checked", false);
+        } else {
+            $(this).addClass("active");
+            $(".mem-table :checkbox").prop("checked", true).attr("checked", true);
+        }
+    });
+    //未全部选择，修改全选样式
+    $(".mem-table :checkbox").click(function () {
+        var check_box_num = $(".mem-table :checkbox").size();//选项总个数
+        var checked_num = 0;
+        $(".mem-table :checkbox").each(function () {
+            if ($(this).prop("checked") == true) {
+                checked_num++;
+            }
+        });
+        if (check_box_num == checked_num) {//全选
+            $(".mem-check-all").addClass("active");
+        } else {//不全选
+            $(".mem-check-all").removeClass("active");
+        }
+    });
+    //点击查看按钮弹出详情框
+    	$(".mem-view").click(function(){
+    		$(".pop-bg").show();
+    		closePOP();
+    	});
+    //点击弹窗的关闭按钮，关闭弹窗
+    function closePOP(){
+    	$(".pop-close").click(function(){
+    		$(".pop-bg").hide();
+    	});
+    }
+</script>
+</body>
+</html>
